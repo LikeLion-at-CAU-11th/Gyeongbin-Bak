@@ -1,3 +1,4 @@
+
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?size=30&duration=4500&color=F77500&width=600&lines=%F0%9F%A6%81_Welcome_Gyeongbin_Bak_%F0%9F%A6%81+)](https://git.io/typing-svg)
 
 <div align="center">
@@ -34,7 +35,7 @@ in CAU <br>
 <br>
 
 ## Contact
-<a href="mailto:”tarabin49@gmail.com”><img src="https://img.shields.io/badge/Gmail-EA4335?style=flat-square&logo=Gmail&logoColor=white&link=mailto:tarabin49@gmail.com/“></a>
+<a href="mailto:tarabin49@gmail.com"><img src="https://img.shields.io/badge/Gmail-EA4335?style=flat-square&logo=Gmail&logoColor=white&link=mailto:tarabin49@gmail.com"/></a>
 <a href="https://www.instagram.com/gydotb/"><img src="https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=Instagram&logoColor=white&link=https://www.instagram.com/gydotb/"/> 
 <br>
 
