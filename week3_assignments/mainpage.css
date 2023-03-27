@@ -1,0 +1,56 @@
+* {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.title{
+    margin: 100px 0px 50px 0px;
+    text-align: center;
+}
+
+.component{
+    width: 1020px;
+    height: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.spring{
+    width: 220px;
+    height: 220px;
+    border-width: 10px 10px 60px 10px;
+    border-style: solid;
+    border-color: #FFBCBC;
+    margin: 0px 5px 0px 0px;    
+    display: inline-block;
+}
+.summer{
+    width: 220px;
+    height: 220px;
+    border-width: 10px 10px 60px 10px;
+    border-style: solid;
+    border-color: #76C18B;
+    margin: 0px 5px 0px 5px;    
+    display: inline-block;
+}
+.autumn{
+    width: 220px;
+    height: 220px;
+    border-width: 10px 10px 60px 10px;
+    border-style: solid;
+    border-color: #A14B4B;
+    margin: 0px 5px 0px 5px;    
+    display: inline-block;
+}
+.winter{
+    width: 220px;
+    height: 220px;
+    border-width: 10px 10px 60px 10px;
+    border-style: solid;
+    border-color: #D9D9D9;
+    margin: 0px 0px 0px 5px;    
+    display: inline-block;
+}
+.bottom{
+    margin: 30px 0px 0px 0px;
+    text-align: center;
+}
