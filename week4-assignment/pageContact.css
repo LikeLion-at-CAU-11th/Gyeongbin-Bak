@@ -1,0 +1,81 @@
+html,
+body {
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+.container{
+    display:flex;
+    flex-direction: column;
+    width: 95vw;
+    height: 95vh;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+}
+.nav{
+    display: flex;
+    width: 90vw;
+    flex-basis: 10%;
+    justify-content: space-evenly;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    flex-basis: 85%;
+    /* border: 1px solid black; */
+    align-items: center;
+    justify-content: center;
+}
+.page{
+    display: flex;
+    /* border: 1px solid black; */
+    flex-basis : 20%;
+    justify-content: center;
+    align-items: center;
+}
+.button-style{
+    font-family: 'Playfair Display', serif;
+    background-color: transparent;
+    border: none;
+    font-size: 1em;
+}
+.button-style:hover{
+    color: rgb(191, 191, 191);
+}
+
+/* 페이지별 content 내부 내용 */
+.picture{
+    width: 25%;
+    /* border: 1px solid black; */
+}
+.picture img{
+    width:100%;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+/*반응형 코드*/
+@media all and (max-width: 350px) {
+    .nav{
+        flex-direction: column;
+        flex-basis: 25%;
+    }
+    .content{
+        overflow: scroll;
+      }
+    .picture{
+        width: 50%;
+    }
+  } 

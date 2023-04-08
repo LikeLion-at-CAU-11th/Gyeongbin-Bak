@@ -1,0 +1,96 @@
+html,
+body {
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+.container{
+    display:flex;
+    flex-direction: column;
+    width: 95vw;
+    height: 95vh;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+}
+.nav{
+    display: flex;
+    width: 90vw;
+    flex-basis: 10%;
+    justify-content: space-evenly;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    flex-basis: 85%;
+    /* border: 1px solid black; */
+    align-items: center;
+    justify-content: center;
+}
+.page{
+    display: flex;
+    /* border: 1px solid black; */
+    flex-basis : 20%;
+    justify-content: center;
+    align-items: center;
+}
+.button-style{
+    font-family: 'Playfair Display', serif;
+    background-color: transparent;
+    border: none;
+    font-size: 1em;
+}
+.button-style:hover{
+    color: rgb(191, 191, 191);
+}
+
+/* 페이지별 content 내부 내용 */
+.content-detail{
+  display: flex;
+  flex-basis: 18%;
+  width: 90%;
+  align-items: center;
+  /* border: 1px solid black; */
+}
+.type{
+  flex-basis: 40%;
+  /* border: 1px solid black; */
+}
+.list{
+  flex-basis: 50%;
+  border-left: 3px solid black;
+} 
+.gitlink{
+  color: white;
+  background-color: rgb(0, 0, 0);
+  border: 1px solid white;
+  border-radius: 10px;
+}
+.gitlink:hover{
+  background-color: rgb(169, 169, 169);
+}
+
+
+/*반응형 코드*/
+@media all and (max-width: 350px) {
+  .nav{
+      flex-direction: column;
+      flex-basis: 25%;
+  }
+  .content{
+    overflow: scroll;
+  }
+  .content-detail{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .list{
+    border-left: none;
+  } 
+} 
