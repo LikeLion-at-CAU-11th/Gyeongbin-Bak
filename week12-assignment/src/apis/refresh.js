@@ -13,7 +13,8 @@ export const getNewRefreshToken = async() => {
                 Authorization: accessToken,
             }
         })
-        return result.data;
+        // return result.data;
+        return result.data.accessToken;
     }catch(error){
         if(error.response.status === 401) {
             alert('토큰 만료! 다시 로그인해주세요.');
