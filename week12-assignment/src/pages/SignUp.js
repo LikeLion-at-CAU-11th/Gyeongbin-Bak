@@ -6,14 +6,15 @@ import { signUp } from '../apis/signUp';
 import { useNavigate } from 'react-router-dom';
 
 export const SignUp = () => {
-    const [id, onChangeID] = useForm();
-    const [pw, onChangePW] = useForm();
-    const [name, onChangeName] = useForm();
-    const [age, onChangeAge] = useForm();
-
+    const [id, onChangeID, isValidID, validTextID] = useForm();
+    const [pw, onChangePW, isValidPW, validTextPW] = useForm();
+    const [name, onChangeName, isValidName, validTextName] = useForm();
+    const [age, onChangeAge, isValidAge, validTextAge] = useForm();
+    
     const router = useNavigate();
 
     const onClick = async() => {
+        // await signUp(id,pw,name,age);
         await signUp(id,pw,name,age);
         router('/');
     }
@@ -22,18 +23,22 @@ export const SignUp = () => {
     <Wrapper>
         <Title>회원가입</Title>
         <Inputs>
-            <Input placeholder='아이디' value={id} onChange={onChangeID} />
+            <Input placeholder='아이디' type="text" value={id} onChange={onChangeID} />
+            <Valid>{validTextID}</Valid>
             <Input placeholder='비밀번호' type="password" value={pw} onChange={onChangePW} />
-            <Input placeholder='이름' value={name} onChange={onChangeName}/>
-            <Input placeholder='나이' value={age} onChange={onChangeAge}/>
+            <Valid>{validTextPW}</Valid>
+            <Input placeholder='이름' type="text" value={name} onChange={onChangeName}/>
+            <Valid>{validTextName}</Valid>
+            <Input placeholder='나이' type="text" value={age} onChange={onChangeAge}/>
+            <Valid>{validTextAge}</Valid>
         </Inputs>
-        <Button onClick={onClick}>Sign Up</Button>
+        <Button isActive={isValidID&&isValidPW&&isValidName&&isValidAge ? false:true} onClick={onClick}>Sign Up</Button>
     </Wrapper>
   )
 }
 
 const Button = styled.button`
-    background-color: black;
+    background-color: ${props => props.isActive? 'gray':'black'};
     color: white;
     padding-left: 20px;
     padding-right: 20px;
@@ -41,4 +46,7 @@ const Button = styled.button`
     padding-bottom: 10px;
     border-radius: 10px;
     margin-top: 20px;
+`
+const Valid = styled.div`
+    color: red;
 `
