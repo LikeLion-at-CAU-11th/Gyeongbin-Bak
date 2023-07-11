@@ -1,20 +1,16 @@
-import React, { useEffect, useState } from 'react'
-import { getMyPage } from '../apis/mypage';
+import React from 'react'
+import { useMypageData } from '../hooks/useMypageData';
 
 export const Mypage = () => {
-    const [data, setData] = useState();
-    const [loading, setLoading] = useState(true);
-    useEffect(() => {
-        getMyPage().then((res)=>{
-            setData(res);
-            setLoading(false);
-        })
-    }, []);
-    if (loading) return (<div>로딩중</div>);
-  return (
-    <div>
-        <div>{data?.name}</div>
-        <div>{data?.age}</div>
-    </div>
-  )
+    //custom Hook 사용
+    const [data, loading] = useMypageData();
+    if (loading) return (<div>로딩 중</div>)
+    else{
+        return (
+            <div>
+                <div>{data.name}</div>
+                <div>{data.age}</div>
+            </div>
+        )
+    }
 }
