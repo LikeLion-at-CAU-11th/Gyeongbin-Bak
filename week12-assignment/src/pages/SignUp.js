@@ -2,12 +2,22 @@ import React from 'react'
 import { Input, Inputs, Title, Wrapper } from '../components/Common'
 import { useForm } from '../hooks/useForm'
 import { styled } from 'styled-components';
+import { signUp } from '../apis/signUp';
+import { useNavigate } from 'react-router-dom';
 
 export const SignUp = () => {
     const [id, onChangeID] = useForm();
     const [pw, onChangePW] = useForm();
     const [name, onChangeName] = useForm();
     const [age, onChangeAge] = useForm();
+
+    const router = useNavigate();
+
+    const onClick = async() => {
+        await signUp(id,pw,name,age);
+        router('/');
+    }
+
   return (
     <Wrapper>
         <Title>회원가입</Title>
@@ -17,7 +27,7 @@ export const SignUp = () => {
             <Input placeholder='이름' value={name} onChange={onChangeName}/>
             <Input placeholder='나이' value={age} onChange={onChangeAge}/>
         </Inputs>
-        <Button>Sign Up</Button>
+        <Button onClick={onClick}>Sign Up</Button>
     </Wrapper>
   )
 }
